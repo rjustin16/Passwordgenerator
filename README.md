@@ -1,94 +1,18 @@
 # Passwordgenerator
 # 03 JavaScript: Password Generator
 
-## Your Task
+## What I did
 
-This week’s homework requires you to create an application that an employee can use to generate a random password based on criteria they’ve selected by modifying starter code. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished user interface that is responsive, ensuring that it adapts to multiple screen sizes.
+I chose to make my password generator an input type instead of with prompts. The generator will default to a lowercase password when the password generator button is hit. There are options for including uppercase, numbers, or symbols to your password. 
 
-The password can include special characters. If you’re unfamiliar with these, see this [list of Password Special Characters from the OWASP Foundation](https://www.owasp.org/index.php/Password_special_characters).
+## How I did it
 
-## User Story
+I first started with my HTML and CSS to create an area where you have a display where the password will be shown. Then there is an input section where you can place how many characters you want in the password. This was done with an <input> with the class number input (this is where the 8-128 length is done). An ID was placed in the input tag which was used to reference that tag in my js file where I gave it input functionality via addEventListener. Next I used check boxes input tags on the uppercase, symbol, and number sections. These were also placed with individual ID tags to be able to be accessed via the js file. All of the inputs were wrapped in a form tag so to apply functionality to the check boxes I used another addEventListener to add functionality to the checkboxes. 
 
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
+## Char codes
 
-## Acceptance Criteria
+The next step was to add value to uppercase, lowercase, symbol, and numbers so the checkboxes had something to reference when checked. I found that there was an array online with these characters already so using .push(String.fromCharCode(characterCode)) I was able to access that data base to pull the characters from. Being able to properly access the charCodes needed to be done with a for loop that went from the lowest value in the CharCodes to the highest value in the charCodes. This had to be done because uppercase numbers for example are 65-90 so the function needed to know where to start and where to begin for every specific parameter. This was done using arrayFromLowToHigh function to ensure the uppercase, lowercase, symbols, and numbers had the proper parameters. 
 
-```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN prompted for character types to include in the password
-THEN I choose lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-```
+## Generate Password
 
-## Mock-Up
-
-The following image shows the web application's appearance and functionality:
-
-![password generator demo](./Assets/03-javascript-homework-demo.png)
-
-## Grading Requirements
-
-This homework is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria plus the following:
-
-  * The homework should not produce any errors in the console when you inspect it using Chrome DevTools.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the homework instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
-
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+Finally the last thing to do was to generate the password. This was done with the generatePassword function where an if statment was used. The default setting that was set here was to let the password would be lowercase. Then using If statements, the password would be modified depending on if the other parameters were checked, then it would access the Char codes set in the array to add to the password generator. Then using the characterCode variable which has a mathfloor and mathrandom function to randomly access the array, the password is generated. Finally to display the password, the password generator function was placed into the addEvenetListener where it was set equal to password, then password was defined using the passworddisplay ID in the HTML file. 

@@ -4,7 +4,7 @@ const UppercaseElement = document.getElementById("Uppercase")
 const NumbersElement = document.getElementById("Numbers")
 const SymbolsElement = document.getElementById("Symbols")
 const form = document.getElementById("passwordGeneratorForm")
-const passowrdDipslay = document.getElementById("passwordDisplay")
+const passwordDipslay = document.getElementById("passwordDisplay")
 
 characterNumber.addEventListener("input", sycnCharacter)
 
@@ -20,7 +20,7 @@ form.addEventListener("submit", e => {
     const Numbers = NumbersElement.checked
     const Symbols = SymbolsElement.checked
     const password = generatePassword(characterAmount, Uppercase, Numbers, Symbols)
-    passowrdDipslay.innerText = password
+    passwordDipslay.innerText = password
 
 })
 
@@ -35,6 +35,14 @@ const symbol = arrayFromLowToHigh(33, 47).concat(
     arrayFromLowToHigh(123, 126)
     )
         
+    function arrayFromLowToHigh(low, high){
+        const array = []
+        for (let i = low; i <= high; i++){
+            array.push(i)
+        }
+        return array
+    }
+    
 
 function generatePassword(characterAmount, Uppercase, Numbers, Symbols) {
     let charCodes = lower
@@ -50,11 +58,4 @@ function generatePassword(characterAmount, Uppercase, Numbers, Symbols) {
     return passwordCharacters.join("")
     }
     
-function arrayFromLowToHigh(low, high){
-    const array = []
-    for (let i = low; i <= high; i++){
-        array.push(i)
-    }
-    return array
-}
 

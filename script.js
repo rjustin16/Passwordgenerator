@@ -17,6 +17,8 @@ const SYMBOL_CHAR_CODES = arrayFromLowToHigh(33, 47).concat(
     arrayFromLowToHigh(123, 126)
     )
         
+    
+
 
 characterAmountNumber.addEventListener("input", sycnCharacterAmount)
 characterAmountRange.addEventListener("input", sycnCharacterAmount)
@@ -38,12 +40,12 @@ function generatePassword(characterAmount, includeUppercase, includeNumbers, inc
     if (includeNumbers) charCodes = charCodes.concat(NUMBER_CHAR_CODES)
     if (includeSymbols) charCodes = charCodes.concat(SYMBOL_CHAR_CODES)
 
-  const passwordCharacters = []
-  for (let i = 0; i < characterAmount; i++) {
-    const characterCode = charCodes[Math.floor(Math.random() * charCodes.length)]
-    passwordCharacters.push(String.fromCharCode(characterCode))
-  }
-  return passwordCharacters.join('')
+const passwordCharacters = []
+for (let i = 0; i < characterAmount; i++) {
+  const characterCode = charCodes[Math.floor(Math.random() * charCodes.length)]
+  passwordCharacters.push(String.fromCharCode(characterCode))
+}
+return passwordCharacters.join("")
 }
     
 function arrayFromLowToHigh(low, high){

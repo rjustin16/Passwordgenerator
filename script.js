@@ -31,8 +31,7 @@ form.addEventListener("submit", e => {
   var upperCaseLetters = "ABCDEFGHIJKLMNOPRSTUVWXYZ";
   var lowerCaseLetters = "abcdefghijklmnopqrstuvwxyz";
 
-
-    
+  
 // random generator function
 function generatePassword(passwordlength, Uppercase, Numbers, Symbols) {
     // default to lowercase

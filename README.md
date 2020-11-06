@@ -11,7 +11,7 @@ I first started with my HTML and CSS to create an area where you have a display 
 
 ## Char codes
 
-The next step was to add value to uppercase, lowercase, symbol, and numbers so the inputs had something to reference when checked. I found that there was an array online with these characters already so using String.fromCharCode I was able to access that data base to pull the characters from (reference https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode). Being able to properly access the charCodes needed to be done with a function utilizing a for loop that went from the lowest value in the CharCodes to the highest value in the charCodes. This had to be done because uppercase numbers for example are 65-90 so the function needed to know where to start (60) and where to end (90) for every specific parameter.  
+The next step was to add value to uppercase, lowercase, symbol, and numbers so the inputs had something to reference when checked. I found that there was an array online with these characters already so using String.fromCharCode I was able to access that data base to pull the characters from (reference https://www.w3schools.com/jsref/jsref_fromcharcode.asp). Being able to properly access the charCodes needed to be done with a function utilizing a for loop that went from the lowest value in the CharCodes to the highest value in the charCodes. This had to be done because uppercase numbers for example are 65-90 so the function needed to know where to start (60) and where to end (90) for every specific parameter.  
 
 ## Generate Password
 

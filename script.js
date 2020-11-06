@@ -22,7 +22,7 @@ form.addEventListener("submit", e => {
     // run generate password function
     const password = generatePassword(passwordlength, Uppercase, Numbers, Symbols)
     // display password variable from generate password function in password display
-    passwordDisplay.innerText = password
+    passwordText.innerText = password
 
 })
 // variables for the characters for the password

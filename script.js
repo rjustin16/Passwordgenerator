@@ -4,7 +4,7 @@ const UppercaseElement = document.getElementById("Uppercase")
 const NumbersElement = document.getElementById("Numbers")
 const SymbolsElement = document.getElementById("Symbols")
 const form = document.getElementById("passwordForm")
-const passwordDisplay = document.getElementById("passwordText")
+const passwordText = document.getElementById("passwordText")
 
 
 // Generate Password Button
@@ -22,7 +22,7 @@ form.addEventListener("submit", e => {
     // run generate password function
     const password = generatePassword(passwordlength, Uppercase, Numbers, Symbols)
     // display password variable from generate password function in password display
-    passwordDisplay.innerText = password
+    passwordText.innerText = password
 
 })
 // variables for the characters for the password

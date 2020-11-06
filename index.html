@@ -3,20 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="script.js" defer></script>
   <link rel="stylesheet" href="css/styles.css">
   <title>Password Generator</title>
 </head>
 <body>
   <div class="container">
     <h1 class="title">Password Generator</h1>
-    <h3 class="password-display" id="passwordText"></h3>
+    <h2 class="password-display" id="passwordText"></h2>
     <form id="passwordForm" class="form">
       <label for="characterAmountNumber">Number Of Characters</label>
-      <div >
-        <input class="number-input" type="number" min="8" max="128" value="0" id="characterNumber">
-      </div>
-
+      <input class="number-input" type="number" min="8" max="128" value="8" id="characterNumber">
+      
       <label for="Uppercase">Uppercase</label>
       <input type="checkbox" id="Uppercase">
 
@@ -29,5 +26,6 @@
       <button type="submit" class="btn">Generate Password</button>
     </form>
   </div>
+  <script src="script.js" ></script>
 </body>
 </html>

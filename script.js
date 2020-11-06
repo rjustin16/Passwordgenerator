@@ -25,7 +25,7 @@ form.addEventListener("submit", e => {
     passwordText.innerText = password
 
 })
-
+// variables for the characters for the password
   var symb = "~!@#$%^&*()_+{}:?><;.,";
   var numb = "1234567890";
   var upperCaseLetters = "ABCDEFGHIJKLMNOPRSTUVWXYZ";

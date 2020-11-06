@@ -7,7 +7,7 @@ I chose to make my password generator an input type instead of with prompts. The
 
 ## How I did it
 
-I first started with my HTML and CSS to create an area where you have a display where the password will be shown. Then there is an input section where you can place how many characters you want in the password. This was done with an <input> with the class number input (this is where the 8-128 length is done). Next I used check boxes input tags on the uppercase, symbol, and number sections. These were all placed with individual ID tags to be able to be accessed via the js file. All of the inputs were wrapped in a form tag so to apply functionality to the check boxes I used addEventListener to add functionality to the checkboxes. 
+I first started with my HTML and CSS to create an area where you have a display where the password will be shown. Then there is an input section where you can place how many characters you want in the password. This was done with an <input> with the class number input in an input tag (this is where the 8-128 length is done). Next I used check boxes input tags on the uppercase, symbol, and number sections. These were all placed with individual ID tags to be able to be accessed via the js file. All of the inputs were wrapped in a form tag so to apply functionality to the check boxes I used addEventListener to add functionality to the checkboxes. 
 
 ## Password content
 
